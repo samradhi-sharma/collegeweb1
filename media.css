@@ -1,0 +1,7 @@
+
+/* Mobile Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) and (orientation: portrait) {
+    /* body { background-color: #6699cc; } */
+    p { font-size: 20px; color: #000000; }
+}
+

@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Lato&family=Roboto:ital@1&display=swap");
+
+.topnav {
+  background-color:rgb(10 9 9);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+:root {
+  --fonts: "Jacques Francois", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgba(7, 7, 7, 0.893);
+  backdrop-filter: blur(175px);
+  offset: none;
+  scroll-behavior: smooth;
+}
+body {
+  background: rgba(7, 7, 7, 0.893);
+  backdrop-filter: blur(175px);
+}
+/* logo */
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  padding-left: 90vw;
+}
+.social i {
+  color: #aaaaaa;
+  width: 1.875vw;
+  height: 1.9vh;
+
+  padding: 0.81vw 0.61vh;
+}
+.social i:hover {
+  color: purple;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: -1rem;
+}
+.logo img {
+  border-radius: 9.21875rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name h1 {
+  color: rgba(240, 234, 225, 0.829);
+  font-family: var(--fonts);
+  font-size: 2.85vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  width: 38vw;
+  height: 8vh;
+}
+.name h2 {
+  color: rgba(240, 234, 225, 0.829);
+  font-family: var(--fonts);
+  font-size: 2.85vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  width: 38vw;
+  height: 8vh;
+}
+a {
+  text-decoration: none;
+}
+/* nav bar*/
+
+hr {
+  margin-top: 1vh;
+  opacity: 0.2;
+}
+nav {
+  display: inline;
+  justify-content: center;
+}
+ul {
+  display: inline;
+  text-align: center;
+  list-style-type: none;
+  width: 100%;
+}
+
+nav ul li {
+  text-decoration: none;
+  display: inline;
+  font-family: var(--fonts);
+  font-size: 20px;
+  background: transparent;
+  font-weight: 400;
+  line-height: 3.877vh;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(253, 242, 221, 0.95);
+  padding-left: 5vw;
+  padding-right: 2vw;
+}
+.nav-link{
+  color: white;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+}
+ul li:hover {
+  cursor: pointer;
+  color: purple;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container img {
+  opacity: 0.2;
+  width: 49vw;
+  height: 55vh;
+  border-radius: 155px 0px 155px 0px;
+  box-shadow: 5px 4px 4px 2px rgba(241, 240, 238, 0.557);
+  border: solid 2px rgb(35, 32, 27);
+}
+.container p {
+  position: absolute;
+  width: 40%;
+  left: 50%;
+  top: 200px;
+  font-family: var(--fonts);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  line-height: 30px;
+  z-index: -1;
+  opacity: 1;
+  text-align: justify;
+  transform: translate(-50%, -50%);
+}
+
+  @media only screen and (max-width: 1024px) {
+  .container p {
+    text-align: justify;
+      font-size: 55%;
+      line-height: 20px;
+  }
+  .container img{
+    width:60%
+  }
+} 
+@media only screen and (max-width: 600px) {
+  
+  
+  .container p {
+      font-size: 50%;
+      line-height: 11px;
+      
+  }
+  .container img{
+    width:60%;
+    /* height: 80%; */
+  }
+  .head{
+    font-size: 50%;
+  }
+} 
+label #btn, label #cancel{
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display:none;
+}
+#check{
+  display: none;
+}
+
+
+footer {
+  padding: 20px;
+}
+/* footer h5 {
+  color: wheat;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* footer h6 {
+  color: wheat;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.socialIcons{
+  display: flex;
+  justify-content:center;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color:rgb(28, 40, 40);
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color:white;
+  opacity: 0.9;
+}
+.footerBottom{
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 40vw;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 199;
+  transition: all 0.6s ease-in-out;
+}
+
+#closePopup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 50px;
+  z-index: 1;
+  background: transparent;
+  transition: all 0.6s ease-in-out;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background: transparent;
+  transition: all 0.6s ease-in-out;
+}
+.contact h2 {
+  width: 16.6vw;
+  height: 6.7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+}
+.platform {
+  margin: 20px;
+  width: 22vw;
+  height: 53vh;
+  top: 159px;
+  left: 226px;
+  border-radius: 15px;
+  background: rgba(217, 217, 217, 1);
+  gap: 10%;
+  display: inline;
+  transition: all 0.6s ease-in-out;
+}
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vh;
+  flex-direction: row;
+  background-color: transparent;
+  left: 50%;
+}
+.media i {
+  background: transparent;
+  font-size: 1.2vw;
+}
+.media h3 {
+  background: transparent;
+  width: 10vw;
+  left: 50%;
+  font-weight: 999;
+  font-family: var(--fonts);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.platform a {
+  color: #000;
+}
+body {
+  font-size: 16px;
+}
+
+/* Responsive styles for screens up to 600px */
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+
+
+
+.platform a:hover {
+  color: purple;
+  transition: all 0.6s ease-in-out;
+}
+
+
+.spinner-container {
+  position: relative;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 4s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
